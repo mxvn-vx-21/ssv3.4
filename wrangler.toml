@@ -19,7 +19,7 @@ database_id = "edca51d2-9f08-4833-bc0d-e3e4959ed1f8"
 binding = "IMAGES"
 bucket_name = "stencyl-images"
 
-/cloud (private file storage) REQUIRES an R2 bucket. Create it, then uncomment and keep in your own wrangler.toml:
+# /cloud (private file storage) REQUIRES an R2 bucket. Create it, then uncomment and keep in your own wrangler.toml:
 wrangler r2 bucket create stencyl-cloud
 [[r2_buckets]]
 binding = "CLOUD"
