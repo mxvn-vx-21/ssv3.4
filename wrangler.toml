@@ -11,16 +11,8 @@ run_worker_first = true
 binding = "DB"
 database_name = "stencyl"
 database_id = "edca51d2-9f08-4833-bc0d-e3e4959ed1f8"
-# Secrets (wrangler secret put): ADMIN_PASSWORD, RESEND_API_KEY, DISCORD_WEBHOOK_URL
 
-# Optional image-host storage with bigger files (5 MB instead of ~1.3 MB in D1).
-# Create the bucket first:  wrangler r2 bucket create stencyl-images   — then uncomment:
-[[r2_buckets]]
-binding = "IMAGES"
-bucket_name = "stencyl-images"
-
-# /cloud (private file storage) REQUIRES an R2 bucket. Create it, then uncomment and keep in your own wrangler.toml:
-wrangler r2 bucket create stencyl-cloud
+# /cloud file storage (create the bucket first: R2 -> Create bucket -> stencyl-cloud)
 [[r2_buckets]]
 binding = "CLOUD"
 bucket_name = "stencyl-cloud"
